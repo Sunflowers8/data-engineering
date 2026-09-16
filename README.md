@@ -1,63 +1,53 @@
-# Data Engineering Learning Repository
+# Data Engineering Internship Journey
 
-This repository documents my hands-on Data Engineering learning and internship practice.
+This repository documents my hands-on learning, exercises, pipelines, and projects completed during a structured 10-week Data Engineering internship.
 
-## Week 1: Data Engineering Foundations
+The repository is organized week by week to demonstrate my progression from Data Engineering fundamentals to building batch, distributed, and streaming data pipelines.
 
-### Concepts Learned
+---
 
-- Modern data stack
-- Source, ingestion, storage, transformation, and serving
-- Batch vs streaming processing
-- Data warehouse, data lake, and lakehouse
-- OLTP vs OLAP
-- Row-oriented vs columnar storage
-- ETL fundamentals
+## Learning Roadmap
 
-### Tools Setup
+| Week | Topic | Status |
+|------|-------|--------|
+| 01 | Data Engineering Foundations & Environment Setup | ✅ Completed |
+| 02 | Advanced SQL | ⏳ Upcoming |
+| 03 | Python Data Pipelines | ⏳ Upcoming |
+| 04 | Data Modeling | ⏳ Upcoming |
+| 05 | Data Warehousing & Storage | ⏳ Upcoming |
+| 06 | dbt & Analytics Engineering | ⏳ Upcoming |
+| 07 | Apache Airflow & Pipeline Orchestration | ⏳ Upcoming |
+| 08 | Docker, CI/CD & Data Quality | ⏳ Upcoming |
+| 09 | PySpark & Distributed Processing | ⏳ Upcoming |
+| 10 | Kafka, Streaming & Capstone Project | ⏳ Upcoming |
 
-- Python
-- VS Code
-- Git
-- GitHub
-- PostgreSQL 16
-- Pandas
-
-Docker setup is pending due to compatibility considerations with my current macOS environment.
-
-### Practical Work
-
-During Week 1, I:
-
-- Worked with CSV datasets using Python
-- Read and transformed data using Pandas
-- Handled missing values
-- Created a basic ETL workflow
-- Installed and configured PostgreSQL
-- Created a PostgreSQL database and table
-- Loaded cleaned CSV data into PostgreSQL
-- Practiced SQL queries on the loaded data
-- Used Git for version control
-- Published the project to GitHub
-
-## Current Pipeline
-
-Raw CSV
-→ Python/Pandas
-→ Cleaned CSV
-→ PostgreSQL
-→ SQL Analytics
+---
 
 ## Repository Structure
 
-- `clean_data.py` - Data cleaning practice
-- `pandas_pipeline.py` - Pandas pipeline practice
-- `read_csv.py` - CSV reading practice
-- `salary_pipeline.py` - Salary transformation pipeline
-- `first.sql` - SQL practice
-- `architecture/` - Data architecture documentation
-- CSV files - Sample raw, transformed, and cleaned datasets
+Each week contains a dedicated README explaining:
 
-## Next Steps
+- Learning objectives
+- Concepts studied
+- Tools used
+- Hands-on exercises
+- Code and queries
+- Mini-projects
+- Problems encountered and solutions
+- Key takeaways
 
-Week 2 will focus on SQL for Data Engineering.
+```text
+data-engineering/
+│
+├── 01-week-foundations/
+├── 02-week-sql/
+├── 03-week-python-pipelines/
+├── 04-week-data-modeling/
+├── 05-week-warehouse-storage/
+├── 06-week-dbt/
+├── 07-week-airflow/
+├── 08-week-docker-cicd/
+├── 09-week-pyspark/
+├── 10-week-kafka-capstone/
+├── resources/
+└── progress/
