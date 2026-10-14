@@ -70,45 +70,89 @@ small, warm-cache experiment. Results are workload-dependent.
 
 **Status:** Module 5 in progress. Local exercises completed;
 full cloud warehouse integration is pending.
-EOF
-## S3-Compatible Object Storage Practical — October 14, 2026
+ 
+## Object Storage Lifecycle Policy
 
-### Objective
-Implement an object-storage pipeline using MinIO, Docker,
-Python Boto3, partitioned Parquet, and DuckDB.
+### Proposed Retention Strategy
 
-### Architecture
-NYC Taxi CSV → Partitioned Parquet → Boto3 → MinIO → DuckDB → SQL
+| Data Category | Storage Strategy | Retention |
+|---|---|---|
+| Raw taxi data | Frequently accessible storage | Preserve for reprocessing |
+| Processed Parquet | Frequently accessible storage | According to analytical requirements |
+| Temporary exports | Automatic expiration | 90 days |
+| Logs | Retain or archive according to operational policy | Policy-dependent |
 
-### Implementation
-- Started MinIO using Docker and Colima.
-- Created a private bucket named `nyc-taxi-data`.
-- Uploaded eight date-partitioned Parquet files using Boto3.
-- Verified uploaded objects using S3 HEAD requests.
-- Configured DuckDB's `httpfs` extension.
-- Queried Parquet directly through the S3-compatible API.
-- Kept local credentials outside version control.
+### Engineering Considerations
 
-### Validation Results
+- Lifecycle policies help manage storage costs.
+- Retention must consider legal and business requirements.
+- Objects needed for pipeline backfills should not be deleted prematurely.
+- Storage transitions can introduce retrieval costs and delays.
+- MinIO is being used locally for S3-compatible API practice.
+- This policy is documented as a proposal, not deployed to AWS.
 
-| Metric | Result |
-|---|---:|
-| Parquet objects uploaded | 8 |
-| Total records queried | 500,000 |
-| January 1 trips | 66,984 |
-| January 1 revenue | $1,973,735.87 |
-| Validation | Passed |
+## Week 5 — Final Review and Assessment
 
-### Engineering Lessons
-- Object storage organizes files using buckets and keys.
-- Hive-style date partitions can support partition pruning.
-- Boto3 works with S3-compatible APIs.
-- DuckDB can query object storage without importing files.
-- Temporary DuckDB secrets keep credentials session-scoped.
-- MinIO is a local S3-compatible alternative, not AWS S3.
+### Query Optimization Practical
+Compared DuckDB execution plans with and without a date filter.
 
-### Limitations
-- Local MinIO is not a production cloud deployment.
-- No Snowflake external table or native Snowflake load
-  has been performed.
-- Actual cloud warehouse integration remains future work.
+| Query | Estimated Rows | Scan Type |
+|---|---:|---|
+| Without date filter | ~500,000 | Sequential scan |
+| With date filter | ~71,429 | Sequential scan with date filter |
+
+The filtered plan applied `pickup_date = '2026-01-01'`
+during the scan.
+
+These are optimizer estimates, not actual scan counts.
+The actual January 1 record count was 66,984.
+
+### Object Storage Lifecycle Policies
+Studied lifecycle rules for managing storage retention,
+archiving, and expiration.
+
+Proposed strategies:
+- Preserve raw data required for reprocessing.
+- Retain processed Parquet according to business needs.
+- Expire temporary exports after 90 days.
+- Consider retrieval costs and legal retention requirements.
+
+No cloud lifecycle policy was deployed.
+
+### Security and Cost Optimization
+- Snowflake auto-suspend and auto-resume.
+- Virtual warehouse sizing and compute costs.
+- Partition pruning and clustering.
+- BigQuery bytes-processed pricing concepts.
+- Role-Based Access Control (RBAC).
+- Least-privilege permissions and secrets management.
+
+### Final Viva Assessment
+Practice assessment score: 17/20 (85%).
+
+Topics assessed:
+1. Parquet partitioning and query optimization.
+2. External versus native Snowflake tables.
+3. Virtual warehouse auto-suspend.
+4. Pipeline idempotency.
+
+Improvement area:
+Implement idempotent loads using partition replacement
+or MERGE with stable unique keys.
+
+### Module Completion Summary
+Status: Local coursework and practical assessment completed.
+
+Completed:
+- CSV versus Parquet comparison.
+- Partitioned Parquet processing.
+- Local S3-compatible storage using MinIO and Boto3.
+- Direct object-storage querying with DuckDB.
+- External-versus-native database comparison.
+- Query benchmarking and execution-plan inspection.
+- DataCamp warehousing and Snowflake fundamentals.
+
+Limitation:
+Actual S3/GCS-to-Snowflake or BigQuery integration was
+not performed. The official cloud warehouse loading
+outcome remains pending.
