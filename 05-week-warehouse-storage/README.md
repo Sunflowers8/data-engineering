@@ -1,4 +1,4 @@
-cat >> 05-week-warehouse-storage/README.md <<'EOF'
+#05-week-warehouse-storage
 
 ## Study Progress — October 13, 2026
 
