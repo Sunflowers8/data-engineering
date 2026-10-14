@@ -91,7 +91,7 @@ full cloud warehouse integration is pending.
 - MinIO is being used locally for S3-compatible API practice.
 - This policy is documented as a proposal, not deployed to AWS.
 
-## Week 5 — Final Review and Assessment
+## Week 5 — Final Technical Review
 
 ### Query Optimization Practical
 Compared DuckDB execution plans with and without a date filter.
@@ -126,19 +126,6 @@ No cloud lifecycle policy was deployed.
 - BigQuery bytes-processed pricing concepts.
 - Role-Based Access Control (RBAC).
 - Least-privilege permissions and secrets management.
-
-### Final Viva Assessment
-Practice assessment score: 17/20 (85%).
-
-Topics assessed:
-1. Parquet partitioning and query optimization.
-2. External versus native Snowflake tables.
-3. Virtual warehouse auto-suspend.
-4. Pipeline idempotency.
-
-Improvement area:
-Implement idempotent loads using partition replacement
-or MERGE with stable unique keys.
 
 ### Module Completion Summary
 Status: Local coursework and practical assessment completed.

@@ -63,20 +63,6 @@ Compared:
 - Storage retention considerations
 - Partition pruning and selective column reads
 
-## Final Viva Assessment
-
-Practice score: 17/20 (85%).
-
-| Topic | Score |
-|---|---:|
-| Partitioning | 4.5/5 |
-| External vs native | 4/5 |
-| Auto-suspend | 5/5 |
-| Idempotency | 3.5/5 |
-
-Improvement area: Implement idempotent data loading
-through partition replacement or stable-key MERGE logic.
-
 ## Remaining Requirement
 
 Actual S3/GCS-to-Snowflake or BigQuery integration
