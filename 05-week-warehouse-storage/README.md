@@ -156,3 +156,10 @@ Limitation:
 Actual S3/GCS-to-Snowflake or BigQuery integration was
 not performed. The official cloud warehouse loading
 outcome remains pending.
+
+## Detailed Documentation
+
+- [Learning Notes](notes/warehouse-storage-notes.md)
+- [NYC Taxi Mini-Project](mini-project/README.md)
+- [Object Storage Exercises](storage/object-storage-exercises.md)
+- [Warehouse Query Exercises](warehouse/warehouse-query-exercises.md)
