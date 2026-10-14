@@ -71,3 +71,44 @@ small, warm-cache experiment. Results are workload-dependent.
 **Status:** Module 5 in progress. Local exercises completed;
 full cloud warehouse integration is pending.
 EOF
+## S3-Compatible Object Storage Practical — October 14, 2026
+
+### Objective
+Implement an object-storage pipeline using MinIO, Docker,
+Python Boto3, partitioned Parquet, and DuckDB.
+
+### Architecture
+NYC Taxi CSV → Partitioned Parquet → Boto3 → MinIO → DuckDB → SQL
+
+### Implementation
+- Started MinIO using Docker and Colima.
+- Created a private bucket named `nyc-taxi-data`.
+- Uploaded eight date-partitioned Parquet files using Boto3.
+- Verified uploaded objects using S3 HEAD requests.
+- Configured DuckDB's `httpfs` extension.
+- Queried Parquet directly through the S3-compatible API.
+- Kept local credentials outside version control.
+
+### Validation Results
+
+| Metric | Result |
+|---|---:|
+| Parquet objects uploaded | 8 |
+| Total records queried | 500,000 |
+| January 1 trips | 66,984 |
+| January 1 revenue | $1,973,735.87 |
+| Validation | Passed |
+
+### Engineering Lessons
+- Object storage organizes files using buckets and keys.
+- Hive-style date partitions can support partition pruning.
+- Boto3 works with S3-compatible APIs.
+- DuckDB can query object storage without importing files.
+- Temporary DuckDB secrets keep credentials session-scoped.
+- MinIO is a local S3-compatible alternative, not AWS S3.
+
+### Limitations
+- Local MinIO is not a production cloud deployment.
+- No Snowflake external table or native Snowflake load
+  has been performed.
+- Actual cloud warehouse integration remains future work.
