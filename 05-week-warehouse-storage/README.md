@@ -1,5 +1,6 @@
-#05-week-warehouse-storage
+# Week 5 — Cloud Warehouse and Object Storage
 
+## Study Progress — October 13, 2026
 ## Study Progress — October 13, 2026
 
 ### DataCamp Courses Completed
