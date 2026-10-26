@@ -1,0 +1,42 @@
+version: 2
+
+models:
+  - name: daily_taxi_revenue
+    description: "Daily NYC Taxi trip and revenue summary."
+
+    columns:
+      - name: pickup_date
+        description: "Date of taxi pickup."
+        data_tests:
+          - not_null
+          - unique
+
+      - name: total_trips
+        description: "Number of trips on that date."
+        data_tests:
+          - not_null
+
+      - name: total_revenue
+        description: "Sum of recorded trip amounts."
+        data_tests:
+          - not_null
+
+  - name: incremental_daily_revenue
+    description: "Incrementally maintained daily taxi revenue."
+
+    columns:
+      - name: pickup_date
+        description: "Date used to uniquely identify each daily summary."
+        data_tests:
+          - not_null
+          - unique
+
+      - name: total_trips
+        description: "Number of trips recorded for the date."
+        data_tests:
+          - not_null
+
+      - name: total_revenue
+        description: "Total recorded revenue for the date."
+        data_tests:
+          - not_null

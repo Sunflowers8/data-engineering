@@ -16,7 +16,7 @@ The roadmap follows the **Data Engineer Foundation Course**, focusing on reliabl
 | 03 | Python for Production & Data Pipelines | ✅ Completed |
 | 04 | Data Modeling & Dimensional Modeling | ✅ Completed |
 | 05 | Cloud Data Warehousing & Object Storage | ✅ Local Coursework Completed |
-| 06 | dbt & Analytics Engineering | 🔄 In Progress |
+| 06 | dbt & Analytics Engineering | ✅ Completed |
 | 07 | Apache Airflow & Pipeline Orchestration | ⏳ Upcoming |
 | 08 | Docker, CI/CD & Data Quality | ⏳ Upcoming |
 | 09 | PySpark & Distributed Processing | ⏳ Upcoming |

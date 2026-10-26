@@ -162,4 +162,4 @@ BigQuery warehouse has not been implemented.
 
 This module demonstrates the principles through DataCamp
 and local S3-compatible object storage.
-EOF
+

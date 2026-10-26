@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: stg_taxi_trips
+    description: "Standardizes NYC Taxi trip data, including column names and timestamp data types."
+    columns:
+      - name: pickup_datetime
+        data_tests:
+          - not_null
+
+      - name: dropoff_datetime
+        data_tests:
+          - not_null

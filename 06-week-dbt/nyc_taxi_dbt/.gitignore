@@ -1,0 +1,13 @@
+# dbt generated files
+target/
+dbt_packages/
+logs/
+
+# Local database files
+*.duckdb
+*.duckdb.wal
+*.duckdb.tmp/
+
+# Secrets and local environments
+.env
+.env.*

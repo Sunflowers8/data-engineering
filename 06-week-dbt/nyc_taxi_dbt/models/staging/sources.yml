@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: nyc_taxi
+    description: "Existing NYC Taxi data loaded into DuckDB during Week 5."
+    schema: main
+    tables:
+      - name: taxi_native
+        description: "500,000 NYC Taxi trip records."
