@@ -1,0 +1,24 @@
+services:
+  airflow:
+    build:
+      context: ..
+      dockerfile: 07-week-airflow/Dockerfile
+
+    image: nyc-taxi-airflow:week7
+    container_name: airflow-week7-reproducible
+    user: "502:0"
+    command: standalone
+
+    ports:
+      - "127.0.0.1:8081:8080"
+
+    environment:
+      AIRFLOW__CORE__LOAD_EXAMPLES: "False"
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: "sqlite:////opt/airflow/runtime/airflow.db"
+      AIRFLOW__LOGGING__BASE_LOG_FOLDER: "/opt/airflow/runtime/logs"
+
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./data:/opt/airflow/data
+      - ./profiles:/opt/airflow/taxi-dbt-profiles
+      - ./runtime:/opt/airflow/runtime

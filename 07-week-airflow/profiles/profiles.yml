@@ -1,0 +1,8 @@
+nyc_taxi_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: /opt/airflow/data/airflow_taxi_practice.duckdb
+      schema: dbt_airflow
+      threads: 1
