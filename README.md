@@ -18,7 +18,7 @@ The roadmap follows the **Data Engineer Foundation Course**, focusing on reliabl
 | 05 | Cloud Data Warehousing & Object Storage | ✅ Local Coursework Completed |
 | 06 | dbt & Analytics Engineering | ✅ Completed |
 | 07 | Apache Airflow & Pipeline Orchestration | ✅ Completed |
-| 08 | Docker, CI/CD & Data Quality | ⏳ Upcoming |
+| 08 | Docker, CI/CD & Data Quality | ✅ Completed |
 | 09 | PySpark & Distributed Processing | ⏳ Upcoming |
 | 10 | Kafka, Streaming & Capstone Project | ⏳ Upcoming |
 

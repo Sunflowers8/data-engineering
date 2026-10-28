@@ -1,0 +1,6 @@
+services:
+  taxi-app:
+    build:
+      context: .
+    image: taxi-revenue:v2
+    command: ["python", "app.py"]
