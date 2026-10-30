@@ -19,7 +19,7 @@ The roadmap follows the **Data Engineer Foundation Course**, focusing on reliabl
 | 06 | dbt & Analytics Engineering | ✅ Completed |
 | 07 | Apache Airflow & Pipeline Orchestration | ✅ Completed |
 | 08 | Docker, CI/CD & Data Quality | ✅ Completed |
-| 09 | PySpark & Distributed Processing | ⏳ Upcoming |
+| 09 | PySpark & Distributed Processing | ✅ Completed |
 | 10 | Kafka, Streaming & Capstone Project | ⏳ Upcoming |
 
 **Note:** Week 5 local coursework, DataCamp training, and practical assessment are complete. Actual S3/GCS-to-Snowflake or BigQuery integration remains a future extension.
