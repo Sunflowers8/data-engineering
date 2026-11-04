@@ -1,0 +1,3 @@
+batch_date,batch_type,customer_rows,order_rows,payment_rows,notes
+2026-10-01,initial,14,18,21,"Initial daily batch with duplicates, same-timestamp ties, optional nulls, and a few missing business keys."
+2026-10-02,incremental,6,14,15,"Incremental batch with customer changes, late-arriving order updates, prior-day late order, payment status updates, and new day-2 records."

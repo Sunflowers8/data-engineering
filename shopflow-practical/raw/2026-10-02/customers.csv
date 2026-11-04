@@ -1,0 +1,7 @@
+source_seq,customer_id,full_name,email,city,updated_at
+2001,C003,Chandra Gurung,chandra@example.com,Bharatpur,2026-10-02T07:00:00Z
+2002,C011,Kiran Maharjan,kiran@example.com,Lalitpur,2026-10-02T07:10:00Z
+2003,C005,Eshan Shrestha,eshan.new@example.com,Kathmandu,2026-10-02T07:20:00Z
+2004,C005,Eshan Shrestha,eshan.primary@example.com,Kathmandu,2026-10-02T07:20:00Z
+2005,C008,Hema Joshi,hema.b@example.com,Butwal,2026-10-02T07:30:00Z
+2006,C012,Laxmi Shah,laxmi@example.com,,2026-10-02T08:00:00Z

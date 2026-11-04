@@ -1,0 +1,38 @@
+
+version: 2
+
+models:
+  - name: dim_customer
+    description: "Current customer dimension using SCD Type 1."
+    columns:
+      - name: customer_key
+        data_tests:
+          - unique
+          - not_null
+
+      - name: customer_id
+        data_tests:
+          - unique
+          - not_null
+
+  - name: fct_orders
+    description: "Order-level fact table with payment summaries."
+    columns:
+      - name: order_id
+        data_tests:
+          - unique
+          - not_null
+
+      - name: customer_key
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_customer')
+                field: customer_key
+
+      - name: status
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['pending', 'completed', 'cancelled']

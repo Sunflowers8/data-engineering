@@ -1,0 +1,21 @@
+source_seq,customer_id,full_name,email,city,updated_at
+1001,C001,Asha Thapa,asha@example.com,Kathmandu,2026-10-01T06:30:00Z
+1002,C002,Bikash Rai,bikash@example.com,Lalitpur,2026-10-01T06:45:00Z
+1003,C003,Chandra Gurung,chandra.old@example.com,Pokhara,2026-10-01T07:00:00Z
+1004,C003,Chandra Gurung,chandra@example.com,Pokhara,2026-10-01T08:00:00Z
+1005,C004,Dipa Karki,dipa@example.com,Bhaktapur,2026-10-01T07:10:00Z
+1006,C005,Eshan Shrestha,eshan.old@example.com,Kathmandu,2026-10-01T07:20:00Z
+1007,C005,Eshan Shrestha,eshan@example.com,Kathmandu,2026-10-01T07:50:00Z
+1008,C006,Farah Khan,farah@example.com,Biratnagar,2026-10-01T07:30:00Z
+1009,C007,Gopal KC,gopal@example.com,Chitwan,2026-10-01T07:40:00Z
+1010,C008,Hema Joshi,hema.a@example.com,,2026-10-01T08:10:00Z
+1011,C008,Hema Joshi,hema.b@example.com,Butwal,2026-10-01T08:10:00Z
+1012,C009,Ishwor Basnet,ishwor@example.com,Dharan,2026-10-01T08:30:00Z
+1013,C010,Jyoti Lama,jyoti@example.com,Kathmandu,2026-10-01T08:45:00Z
+1014,,Unknown Customer,unknown@example.com,Kathmandu,2026-10-01T09:00:00Z
+2001,C003,Chandra Gurung,chandra@example.com,Bharatpur,2026-10-02T07:00:00Z
+2002,C011,Kiran Maharjan,kiran@example.com,Lalitpur,2026-10-02T07:10:00Z
+2003,C005,Eshan Shrestha,eshan.new@example.com,Kathmandu,2026-10-02T07:20:00Z
+2004,C005,Eshan Shrestha,eshan.primary@example.com,Kathmandu,2026-10-02T07:20:00Z
+2005,C008,Hema Joshi,hema.b@example.com,Butwal,2026-10-02T07:30:00Z
+2006,C012,Laxmi Shah,laxmi@example.com,,2026-10-02T08:00:00Z

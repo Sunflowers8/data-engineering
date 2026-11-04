@@ -1,0 +1,21 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Databases and temporary files
+*.duckdb
+*.duckdb.wal
+*.duckdb.tmp
+
+# dbt generated files
+target/
+dbt_packages/
+logs/
+
+# Local configuration
+profiles.yml
+.user.yml
+
+# macOS
+.DS_Store

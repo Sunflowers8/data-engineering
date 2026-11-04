@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: shopflow_raw
+    schema: main
+    tables:
+      - name: customers
+      - name: orders
+      - name: payments
